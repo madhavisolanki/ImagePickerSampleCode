@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+
+target 'SwiftSampleCode' do
+  pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
+  pod 'Moya/RxSwift'
+  pod 'OAuthSwift', '~> 1.1.0'
+  pod 'RxSwift',    '~> 3.0'
+  pod 'RxCocoa',    '~> 3.0'
+  pod 'Moya-ModelMapper/RxSwift', '~> 4.1.0'
+  pod 'RxOptional'
+  pod 'RxSwift-ObjectMapper', '~> 1.0'
+  pod 'ImagePicker'
+  pod 'Gallery'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  # Pods for SwiftSampleCode
+
+  target 'SwiftSampleCodeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SwiftSampleCodeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

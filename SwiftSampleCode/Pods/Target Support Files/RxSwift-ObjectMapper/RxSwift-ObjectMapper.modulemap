@@ -1,0 +1,6 @@
+framework module RxSwift_ObjectMapper {
+  umbrella header "RxSwift-ObjectMapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,48 @@
+Hi,
+
+Please check attached code. 
+
+**SwiftSampleApp**
+
+Import pictures from Flickr
+Import from photo library
+Import from camera capture.
+Add text for image.
+Multiselect images from library and flickr API.
+Share picture url on social media.
+
+
+**NOTE**
+Flickr : Since there are lot of images on flickr, I have restricted it to 20 items. I havent added any pagination to it. Since its a proof of concept.
+I have appended URL parameter directly in API class. Usually I dont this way, but since this is POC, I made exception.
+I have added loader to load images from flickr.
+
+
+You can only share images imported from flickr API since it has shareable URI. If you want me to add faebook and other sdks, I can do that. I still have time. I have used UIActivityViewController for convience. You might have to test this on device.
+
+Photo Library: Please note that I have limited the photo import to 100 images. Since it's lot of load on app due to heavy image play. Also note that since this is POC. I havent implemented async image download. 
+
+To avoid load on app, restricted image selection for two at a time. Sometimes, there is error in loading large image, in that case you will view a flower png which is placeholder image.
+
+Since this was not mentioned in the doc, but I have added extra feature of adding text with images, also added multiple image support.
+
+**Architecture**
+I have used MVVM and RxSwift to achieve MVVM architecuture. 
+I have demoed using collection view through RxSwift on HomeViewController. 
+I have used normal swift in other classes. 
+You can check more about RxSwift here : https://github.com/ReactiveX/RxSwift
+I have done mapping from JSON to object using ObjectMapper.
+I have created the photo library UI entirely myself. You can check it. I have used photos and combination of open source library imagePicker. I have used imagePicker for Camera and used some of its element in Photo libray. 
+
+**Test**
+I have tested this app on iPhone6 device and used simulator for the other device test.
+I have also added UI Automation test. Please check that as well.
+
+**Code ethics**
+I have tried to put best methods forward and tried achieveing encapsulation and abstraction.
+
+**UI**
+UI is pretty simple. I havent really involved much of time in making jazzy UI. But UI is very neat and clean. In case better UI is required I can do that as well.
+
+**edge cases**
+Since this is POC I have ignored some test scenarios. If you want me to cover those I can do as well.
